@@ -50,6 +50,10 @@ app.use(function (err, req, res, next) {
     }
 });
 
+app.get("/test", (req, res) => {
+    console.log("got it");
+});
+
 app.post("/api/signup", (req, res) => {
     const { getUsername, getPassword } = req.body;
 
