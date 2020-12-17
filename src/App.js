@@ -1,24 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom"
+
+import Home from './pages/home';
+import Dashboard from './pages/dashboard';
+import Login from './pages/login';
+import Signup from './pages/signup';
+import Logout from './pages/logout';
+import Menu from './components/menu';
+import tokencheck from './components/tokencheck';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Menu />
+      <Switch>
+        <Route path="/dashboard">{tokencheck(Dashboard)}</Route>
+        <Route path="/login"><Login /></Route>
+        <Route path="/signup"><Signup /></Route>
+        <Route path="/logout"><Logout /></Route>
+        <Route path="/"><Home /></Route>
+      </Switch>
+    </Router>
   );
 }
 
