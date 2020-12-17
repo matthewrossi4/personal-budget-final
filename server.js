@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const expressJWT = require("express-jwt");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
+require('dotenv').config();
 
 const app = express();
 const port = 4000;
@@ -24,10 +25,10 @@ app.use((req, res, next) => {
 });
 
 var connection = mysql.createPool({
-    host: 'db-4166-final.cvixhm2uya2p.us-east-1.rds.amazonaws.com',
-    user: 'application',
-    password: 'CvA38e*K%Uw$',
-    database: 'project'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_DATA
 });
 
 connection.getConnection(function(err) {

@@ -25,7 +25,7 @@ function Login() {
         }
 
         axios
-        .post('http://54.163.146.144:4000/api/login', {getUsername, getPassword})
+        .post(`${process.env.SERVER_ADDR}/api/login`, {getUsername, getPassword})
         .then((res) => {
             localStorage.setItem("tkn", res.data.token);
             history.push("/dashboard");
