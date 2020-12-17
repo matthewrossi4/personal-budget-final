@@ -147,7 +147,7 @@ function Dashboard() {
     }
 
     return (
-        <div>
+        <section>
             <div className="page">
                 <div className="wrapper">
                     <div className="content-wrapper">
@@ -220,7 +220,7 @@ function Dashboard() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

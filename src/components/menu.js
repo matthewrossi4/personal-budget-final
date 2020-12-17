@@ -11,7 +11,7 @@ function Menu() {
     }, [location]);
 
     return (
-        <div className="heads">
+        <nav>
             <h1>Personal Budget</h1>
             <br />
             <div className="alignment">
@@ -28,7 +28,7 @@ function Menu() {
                     )}
                 </ul>
             </div>
-        </div>
+        </nav>
     );
 }
 

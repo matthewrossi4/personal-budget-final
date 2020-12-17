@@ -37,7 +37,7 @@ function Login() {
     }
 
     return (
-        <div className="login">
+        <section className="login">
             <h1 className="head">Login</h1>
             <form onSubmit={submitThis}>
                 <div className="row">
@@ -55,7 +55,7 @@ function Login() {
                     <input type="submit" value="Login" id="login" />
                 </div>
             </form>
-        </div>
+        </section>
     );
 }
 

@@ -13,6 +13,10 @@ body {
   margin: 0;
 }
 
+header {
+  text-align: center;
+}
+
 .nav,.nav a,.nav ul,.nav li {
   margin: 0;
   padding: 0;
@@ -77,11 +81,11 @@ body {
   border-radius: 0 3px 3px 0;
 }
 
-.heads {
+nav {
   background-color: #6ad655;
 }
 
-.heads h1 {
+nav h1 {
   text-align: center;
   display: block;
   font-size: 50px;

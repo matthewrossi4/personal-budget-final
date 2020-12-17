@@ -36,7 +36,7 @@ function Signup() {
     }
 
     return (
-        <div className="signup">
+        <section className="signup">
             <h1 className="head">Sign Up</h1>
             <form onSubmit={submitThis}>
                 <div className="row">
@@ -54,7 +54,7 @@ function Signup() {
                     <input type="submit" value="Signup" id="signup" />
                 </div>
             </form>
-        </div>
+        </section>
     );
 }
 
