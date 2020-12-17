@@ -25,7 +25,7 @@ function Signup() {
         }
 
         axios
-        .post('https://206.81.15.62:4000/api/signup', {getUsername, getPassword})
+        .post('https://172.31.82.2:4000/api/signup', {getUsername, getPassword})
         .then((res) => {
             history.push("/login");
         })

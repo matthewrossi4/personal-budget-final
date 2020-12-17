@@ -61,7 +61,7 @@ function Dashboard() {
     useEffect(() => {
         const tkn = localStorage.getItem("tkn");
 
-        axios.get("https://206.81.15.62:4000/api/budget", {headers: {Authorization: `Bearer ${tkn}`},})
+        axios.get("https://172.31.82.2:4000/api/budget", {headers: {Authorization: `Bearer ${tkn}`},})
         .then((res) => {
             updateData(res);
         })
@@ -79,7 +79,7 @@ function Dashboard() {
         const token = localStorage.getItem("tkn");
         var color = "#" + Math.floor(Math.random()*16777215).toString(16);
 
-        axios.post('https://206.81.15.62:4000/api/budget', {getItemName, getItemValue, color, getItemExpense},{headers: {Authorization: `Bearer ${token}`}})
+        axios.post('https://172.31.82.2:4000/api/budget', {getItemName, getItemValue, color, getItemExpense},{headers: {Authorization: `Bearer ${token}`}})
         .then((res) => {
             updateData(res);
             setItemName("");
