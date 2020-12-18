@@ -91,17 +91,6 @@ function Dashboard() {
         });
     };
 
-    /*const removeBudgetItem = (id) => {
-        const token = localStorage.getItem("tkn");
-        axios.delete(`http://localhost:4000/api/budget/${id}`, {headers: {Authorization: `Bearer ${token}`}})
-        .then((res) => {
-            setBudget(getBudget.filter((item) => item.id !== id));
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-    };*/
-
     const updateData = (res) => {
         let tempBud = {
             datasets: [

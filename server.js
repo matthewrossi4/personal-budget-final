@@ -51,10 +51,6 @@ app.use(function (err, req, res, next) {
     }
 });
 
-app.get("/test", (req, res) => {
-    console.log("got it");
-});
-
 app.post("/api/signup", (req, res) => {
     const { getUsername, getPassword } = req.body;
 
@@ -117,21 +113,6 @@ app.get("/api/budget", jwtMW, (req, res) => {
         } else {
             res.status(200).json({
                 budget: result
-            });
-        }
-    });
-});
-
-app.delete("/api/budget/:id", jwtMW, (req, res) => {
-    connection.query(`DELETE FROM budget WHERE id=${req.params.id}`, (error, result) => {
-        if (error) {
-            res.status(401).json({
-                success: false,
-                err: error
-            });
-        } else {
-            res.status(200).json({
-                deleted: true
             });
         }
     });
